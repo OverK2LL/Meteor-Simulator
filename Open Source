@@ -570,4 +570,7 @@ Event:FireServer(A_1, A_2)
 wait(10)
     end
 end)
+
+local Credits = Window:NewTab("Credits")
+local CreditsSection = Credits:NewTab("OverK2ll#3442")
 end
