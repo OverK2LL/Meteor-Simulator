@@ -572,5 +572,5 @@ wait(10)
 end)
 
 local Credits = Window:NewTab("Credits")
-local CreditsSection = Credits:NewTab("OverK2ll#3442")
+local CreditsSection = Credits:NewSection("OverK2ll#3442")
 end
