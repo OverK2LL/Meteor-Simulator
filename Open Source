@@ -1,0 +1,573 @@
+if game.PlaceId == 9602700094 then
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+    local Window = Library.CreateLib("Meteor Simulator", "BloodTheme")
+ 
+    -- MAIN
+    local Main = Window:NewTab("Main")
+    local MainSection = Main:NewSection("Main")
+
+    MainSection:NewToggle("Auto Rebirth", "Rebirths Automatically", function(v)
+        getgenv().autoswinger = v
+        while true do
+        if not getgenv().autoswinger then return end
+        local A_1 = "RebirthRequest"
+        local Event = game:GetService("ReplicatedStorage").Communication.RE
+        Event:FireServer(A_1)
+    wait(3)        
+        end
+end)
+
+    local Choices; --CREATE GLOBAL VARIABLE OF THE USERS SELECTION TO BE USED ANYWHERE
+    MainSection:NewDropdown("Select Target", "Select what you want to automatically destroy", {"City Stacks", "City Pile", "City Crate", "City Safe", "Desert Stacks", "Desert Pile", "Desert Crate", "Desert Safe", "Ocean Stacks", "Ocean Pile", "Ocean Crate", "Ocean Safe", "Winter Stacks", "Winter Pile", "Winter Crate", "Winter Safe", "Toxic Stacks", "Toxic Pile", "Toxic Crate", "Toxic Safe", "Candy Stacks", "Candy Pile", "Candy Crate", "Candy Safe", "Lava Stacks", "Lava Pile", "Lava Crate", "Lava Safe", "Electro Stacks", "Electro Pile", "Electro Crate", "Electro Safe", "Samurai Stacks", "Samurai Pile", "Samurai Crate", "Samurai Safe", "Heaven Stacks", "Heaven Pile", "Heaven Crate", "Heaven Safe",}, function(value)--THIS FUNCTION ALLOWS US TO STORE THE USERS SELECTION
+        Choices = value; --STORES THE USERS SELECTION
+    end)
+
+
+    MainSection:NewToggle("Auto Attack", "Attacks", function(v)
+
+                 ---Loops---
+            getgenv().autoswing = v
+            while true do
+            if not getgenv().autoswing then return end
+                 ---Loops---
+
+
+                 if Choices == "City Stacks" then
+
+
+            local A_1 = "SelectObject"
+local A_2 = game:GetService("Workspace").Objects["City Stacks"].HitBox
+local Event = game:GetService("ReplicatedStorage").Communication.RE
+Event:FireServer(A_1, A_2)
+wait(1)
+
+                 else if Choices == "City Pile" then
+
+                    local A_1 = "SelectObject"
+local A_2 = game:GetService("Workspace").Objects["City Pile"].HitBox
+local Event = game:GetService("ReplicatedStorage").Communication.RE
+Event:FireServer(A_1, A_2)
+wait(1)
+
+                 else if Choices == "City Crate" then
+                    local A_1 = "SelectObject"
+local A_2 = game:GetService("Workspace").Objects["City Crate"].HitBox
+local Event = game:GetService("ReplicatedStorage").Communication.RE
+Event:FireServer(A_1, A_2)
+wait(1)
+else if Choices == "Desert Safe" then
+    local A_1 = "SelectObject"
+    local A_2 = game:GetService("Workspace").Objects["City Safe"].HitBox
+    local Event = game:GetService("ReplicatedStorage").Communication.RE
+    Event:FireServer(A_1, A_2)
+wait(1)                    
+
+
+
+                 else if Choices == "Desert Stacks" then
+                    local A_1 = "SelectObject"
+                    local A_2 = game:GetService("Workspace").Objects["Desert Stacks"].HitBox
+                    local Event = game:GetService("ReplicatedStorage").Communication.RE
+                    Event:FireServer(A_1, A_2)
+wait(1)                    
+else if Choices == "Desert Pile" then
+    local A_1 = "SelectObject"
+    local A_2 = game:GetService("Workspace").Objects["Desert Pile"].HitBox
+    local Event = game:GetService("ReplicatedStorage").Communication.RE
+    Event:FireServer(A_1, A_2)
+wait(1)
+else if Choices == "Desert Crate" then
+    local A_1 = "SelectObject"
+    local A_2 = game:GetService("Workspace").Objects["Desert Crate"].HitBox
+    local Event = game:GetService("ReplicatedStorage").Communication.RE
+    Event:FireServer(A_1, A_2)
+wait(1)    
+else if Choices == "Desert Safe" then
+    local A_1 = "SelectObject"
+    local A_2 = game:GetService("Workspace").Objects["Winter Safe"].HitBox
+    local Event = game:GetService("ReplicatedStorage").Communication.RE
+    Event:FireServer(A_1, A_2)
+wait(1)
+
+
+else if Choices == "Atlantis Stacks" then
+    local A_1 = "SelectObject"
+    local A_2 = game:GetService("Workspace").Objects["Atlantis Stacks"].HitBox
+    local Event = game:GetService("ReplicatedStorage").Communication.RE
+    Event:FireServer(A_1, A_2)
+wait(1)    
+else if Choices == "Atlantis Pile" then
+    local A_1 = "SelectObject"
+    local A_2 = game:GetService("Workspace").Objects["Atlantis Pile"].HitBox
+    local Event = game:GetService("ReplicatedStorage").Communication.RE
+    Event:FireServer(A_1, A_2)
+wait(1)    
+else if Choices == "Atlantis Crate" then
+    local A_1 = "SelectObject"
+    local A_2 = game:GetService("Workspace").Objects["Atlantis Crate"].HitBox
+    local Event = game:GetService("ReplicatedStorage").Communication.RE
+    Event:FireServer(A_1, A_2)
+wait(1)    
+else if Choices == "Atlantis Safe" then
+    local A_1 = "SelectObject"
+    local A_2 = game:GetService("Workspace").Objects["Atlantis Safe"].HitBox
+    local Event = game:GetService("ReplicatedStorage").Communication.RE
+    Event:FireServer(A_1, A_2)
+wait(1)
+
+
+
+else if Choices == "Winter Stacks" then
+    local A_1 = "SelectObject"
+    local A_2 = game:GetService("Workspace").Objects["Winter Stacks"].HitBox
+    local Event = game:GetService("ReplicatedStorage").Communication.RE
+    Event:FireServer(A_1, A_2)
+wait(1)    
+else if Choices == "Winter Pile" then
+    local A_1 = "SelectObject"
+    local A_2 = game:GetService("Workspace").Objects["Winter Pile"].HitBox
+    local Event = game:GetService("ReplicatedStorage").Communication.RE
+    Event:FireServer(A_1, A_2)
+wait(1)    
+else if Choices == "Winter Crate" then
+    local A_1 = "SelectObject"
+    local A_2 = game:GetService("Workspace").Objects["Winter Crate"].HitBox
+    local Event = game:GetService("ReplicatedStorage").Communication.RE
+    Event:FireServer(A_1, A_2)
+wait(1)    
+else if Choices == "Winter Safe" then
+    local A_1 = "SelectObject"
+    local A_2 = game:GetService("Workspace").Objects["Winter Safe"].HitBox
+    local Event = game:GetService("ReplicatedStorage").Communication.RE
+    Event:FireServer(A_1, A_2)
+wait(1)
+
+
+
+else if Choices == "Toxic Stacks" then
+    local A_1 = "SelectObject"
+    local A_2 = game:GetService("Workspace").Objects["Toxic Stacks"].HitBox
+    local Event = game:GetService("ReplicatedStorage").Communication.RE
+    Event:FireServer(A_1, A_2)
+wait(1)    
+else if Choices == "Toxic Pile" then
+    local A_1 = "SelectObject"
+    local A_2 = game:GetService("Workspace").Objects["Toxic Pile"].HitBox
+    local Event = game:GetService("ReplicatedStorage").Communication.RE
+    Event:FireServer(A_1, A_2)
+wait(1)    
+else if Choices == "Toxic Crate" then
+    local A_1 = "SelectObject"
+    local A_2 = game:GetService("Workspace").Objects["Toxic Crate"].HitBox
+    local Event = game:GetService("ReplicatedStorage").Communication.RE
+    Event:FireServer(A_1, A_2)
+wait(1)    
+else if Choices == "Toxic Safe" then
+    local A_1 = "SelectObject"
+    local A_2 = game:GetService("Workspace").Objects["Toxic Safe"].HitBox
+    local Event = game:GetService("ReplicatedStorage").Communication.RE
+    Event:FireServer(A_1, A_2)
+wait(1)
+
+
+
+
+else if Choices == "Candy Safe" then
+    local A_1 = "SelectObject"
+    local A_2 = game:GetService("Workspace").Objects["Candy Stacks"].HitBox
+    local Event = game:GetService("ReplicatedStorage").Communication.RE
+    Event:FireServer(A_1, A_2)
+wait(1)    
+else if Choices == "Candy Pile" then
+    local A_1 = "SelectObject"
+    local A_2 = game:GetService("Workspace").Objects["Candy Pile"].HitBox
+    local Event = game:GetService("ReplicatedStorage").Communication.RE
+    Event:FireServer(A_1, A_2)
+wait(1)    
+else if Choices == "Candy Crate" then
+    local A_1 = "SelectObject"
+    local A_2 = game:GetService("Workspace").Objects["Candy Crate"].HitBox
+    local Event = game:GetService("ReplicatedStorage").Communication.RE
+    Event:FireServer(A_1, A_2)
+wait(1)    
+else if Choices == "Candy Safe" then
+    local A_1 = "SelectObject"
+    local A_2 = game:GetService("Workspace").Objects["Candy Safe"].HitBox
+    local Event = game:GetService("ReplicatedStorage").Communication.RE
+    Event:FireServer(A_1, A_2)
+wait(1)
+
+
+
+else if Choices == "Lava Stacks" then
+    local A_1 = "SelectObject"
+    local A_2 = game:GetService("Workspace").Objects["Lava Stacks"].HitBox
+    local Event = game:GetService("ReplicatedStorage").Communication.RE
+    Event:FireServer(A_1, A_2)
+wait(1)    
+else if Choices == "Lava Pile" then
+    local A_1 = "SelectObject"
+    local A_2 = game:GetService("Workspace").Objects["Lava Pile"].HitBox
+    local Event = game:GetService("ReplicatedStorage").Communication.RE
+    Event:FireServer(A_1, A_2)
+wait(1)    
+else if Choices == "Lava Crate" then
+    local A_1 = "SelectObject"
+    local A_2 = game:GetService("Workspace").Objects["Lava Crate"].HitBox
+    local Event = game:GetService("ReplicatedStorage").Communication.RE
+    Event:FireServer(A_1, A_2)
+wait(1)    
+else if Choices == "Lava Safe" then
+    local A_1 = "SelectObject"
+    local A_2 = game:GetService("Workspace").Objects["Lava Safe"].HitBox
+    local Event = game:GetService("ReplicatedStorage").Communication.RE
+    Event:FireServer(A_1, A_2)
+wait(1)
+
+
+else if Choices == "Electro Stacks" then
+    local A_1 = "SelectObject"
+    local A_2 = game:GetService("Workspace").Objects["Electro Stacks"].HitBox
+    local Event = game:GetService("ReplicatedStorage").Communication.RE
+    Event:FireServer(A_1, A_2)
+wait(1)    
+else if Choices == "Electro Pile" then
+    local A_1 = "SelectObject"
+    local A_2 = game:GetService("Workspace").Objects["Electro Pile"].HitBox
+    local Event = game:GetService("ReplicatedStorage").Communication.RE
+    Event:FireServer(A_1, A_2)
+wait(1)    
+else if Choices == "Electro Crate" then
+    local A_1 = "SelectObject"
+    local A_2 = game:GetService("Workspace").Objects["Electro Crate"].HitBox
+    local Event = game:GetService("ReplicatedStorage").Communication.RE
+    Event:FireServer(A_1, A_2)
+wait(1)    
+else if Choices == "Electro Safe" then
+    local A_1 = "SelectObject"
+    local A_2 = game:GetService("Workspace").Objects["Electro Safe"].HitBox
+    local Event = game:GetService("ReplicatedStorage").Communication.RE
+    Event:FireServer(A_1, A_2)
+wait(1)
+
+
+else if Choices == "Samurai Stacks" then
+    local A_1 = "SelectObject"
+    local A_2 = game:GetService("Workspace").Objects["Samurai Stacks"].HitBox
+    local Event = game:GetService("ReplicatedStorage").Communication.RE
+    Event:FireServer(A_1, A_2)
+wait(1)
+else if Choices == "Samurai Pile" then
+    local A_1 = "SelectObject"
+    local A_2 = game:GetService("Workspace").Objects["Samurai Pile"].HitBox
+    local Event = game:GetService("ReplicatedStorage").Communication.RE
+    Event:FireServer(A_1, A_2)
+wait(1)    
+else if Choices == "Samurai Crate" then
+    local A_1 = "SelectObject"
+    local A_2 = game:GetService("Workspace").Objects["Samurai Crate"].HitBox
+    local Event = game:GetService("ReplicatedStorage").Communication.RE
+    Event:FireServer(A_1, A_2)
+wait(1)
+else if Choices == "Samurai Safe" then
+    local A_1 = "SelectObject"
+    local A_2 = game:GetService("Workspace").Objects["Samurai Safe"].HitBox
+    local Event = game:GetService("ReplicatedStorage").Communication.RE
+    Event:FireServer(A_1, A_2)
+wait(1)
+
+
+else if Choices == "Heaven Stacks" then
+    local A_1 = "SelectObject"
+    local A_2 = game:GetService("Workspace").Objects["Heaven Stacks"].HitBox
+    local Event = game:GetService("ReplicatedStorage").Communication.RE
+    Event:FireServer(A_1, A_2)
+wait(1)    
+else if Choices == "Heaven Pile" then
+    local A_1 = "SelectObject"
+    local A_2 = game:GetService("Workspace").Objects["Heaven Pile"].HitBox
+    local Event = game:GetService("ReplicatedStorage").Communication.RE
+    Event:FireServer(A_1, A_2)
+wait(1)
+else if Choices == "Heaven Crate" then
+    local A_1 = "SelectObject"
+    local A_2 = game:GetService("Workspace").Objects["Heaven Crate"].HitBox
+    local Event = game:GetService("ReplicatedStorage").Communication.RE
+    Event:FireServer(A_1, A_2)
+wait(1)    
+else if Choices == "Heaven Safe" then
+    local A_1 = "SelectObject"
+    local A_2 = game:GetService("Workspace").Objects["Heaven Safe"].HitBox
+    local Event = game:GetService("ReplicatedStorage").Communication.RE
+    Event:FireServer(A_1, A_2)
+wait(1)
+
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end)
+
+
+local Teleport = Window:NewTab("Teleport")
+local TeleportSection = Teleport:NewSection("Teleport")
+
+
+local Tele; --CREATE GLOBAL VARIABLE OF THE USERS SELECTION TO BE USED ANYWHERE
+TeleportSection:NewDropdown("Select Destination", "Select where you wanna go Duh??", {"City", "Desert", "Atlantis", "Winter", "Toxic", "Candy", "Lava", "Electro", "Samurai", "Heaven", "Summer",}, function(value)--THIS FUNCTION ALLOWS US TO STORE THE USERS SELECTION
+    Tele = value; --STORES THE USERS SELECTION
+end)
+
+TeleportSection:NewButton("Teleport", "Teleports", function(v)
+
+if Tele == "City" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1, 8.5, -119, 0, 0, 1, 0, 1, -0, -1, 0, 0)        
+else if Tele == "Desert" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1, 8.5, 146, 0, 0, 1, 0, 1, -0, -1, 0, 0)     
+else if Tele == "Atlantis" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1, 8.5, 405, 0, 0, 1, 0, 1, -0, -1, 0, 0) 
+else if Tele == "Toxic" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1, 8.5, 654, 0, 0, 1, 0, 1, -0, -1, 0, 0)     
+else if Tele == "Candy" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1, 8.5, 905, 0, 0, 1, 0, 1, -0, -1, 0, 0)     
+else if Tele == "Lava" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1, 8.5, 1156, 0, 0, 1, 0, 1, -0, -1, 0, 0)     
+else if Tele == "Electro" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1, 8.5, 1407, 0, 0, 1, 0, 1, -0, -1, 0, 0)     
+else if Tele == "Samurai" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1, 8.5, 1664, 0, 0, 1, 0, 1, -0, -1, 0, 0)     
+else if Tele == "Heaven" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1, 8.5, 1923, 0, 0, 1, 0, 1, -0, -1, 0, 0)                                     
+                                    end
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+end)
+
+
+
+local Eggs = Window:NewTab("Eggs")
+local EggsSection = Eggs:NewSection("Eggs")
+
+local EC; --CREATE GLOBAL VARIABLE OF THE USERS SELECTION TO BE USED ANYWHERE
+EggsSection:NewDropdown("Select Egg", "Select What Egg You Want Duh??", {"City Egg", "Desert Egg", "Water Egg", "Winter Egg", "Toxic Egg", "Candy Egg", "Lava Egg", "Electro Egg", "Samurai Egg", "Heaven Egg",}, function(value)--THIS FUNCTION ALLOWS US TO STORE THE USERS SELECTION
+    EC = value; --STORES THE USERS SELECTION
+end)
+
+EggsSection:NewToggle("Auto Open", "Auto Opens Selected Egg ?/???/?", function(v)
+
+    ---Loops---
+getgenv().autoswings = v
+while true do
+if not getgenv().autoswings then return end
+    ---Loops---
+
+    if EC == "City Egg" then
+        local A_1 = "PetInv"
+local A_2 = "HatchOnce"
+local A_3 = "City Egg"
+local Event = game:GetService("ReplicatedStorage").Communication.RE
+Event:FireServer(A_1, A_2, A_3)
+wait(0.5)
+
+
+    else if EC == "Desert Egg" then
+    local A_1 = "PetInv"
+local A_2 = "HatchOnce"
+local A_3 = "Desert Egg"
+local Event = game:GetService("ReplicatedStorage").Communication.RE
+Event:FireServer(A_1, A_2, A_3)
+wait(0.5)
+
+
+else if EC == "Water Egg" then
+    local A_1 = "PetInv"
+local A_2 = "HatchOnce"
+local A_3 = "Water Egg"
+local Event = game:GetService("ReplicatedStorage").Communication.RE
+Event:FireServer(A_1, A_2, A_3)
+wait(0.5)
+
+
+else if EC == "Winter Egg" then
+    local A_1 = "PetInv"
+local A_2 = "HatchOnce"
+local A_3 = "Winter Egg"
+local Event = game:GetService("ReplicatedStorage").Communication.RE
+Event:FireServer(A_1, A_2, A_3)
+wait(0.5)
+
+
+else if EC == "Toxic Egg" then
+    local A_1 = "PetInv"
+local A_2 = "HatchOnce"
+local A_3 = "Toxic Egg"
+local Event = game:GetService("ReplicatedStorage").Communication.RE
+Event:FireServer(A_1, A_2, A_3)
+wait(0.5)
+
+
+else if EC == "Candy Egg" then
+    local A_1 = "PetInv"
+local A_2 = "HatchOnce"
+local A_3 = "Candy Egg"
+local Event = game:GetService("ReplicatedStorage").Communication.RE
+Event:FireServer(A_1, A_2, A_3)
+wait(0.5)
+
+
+else if EC == "Lava Egg" then
+    local A_1 = "PetInv"
+local A_2 = "HatchOnce"
+local A_3 = "Lava Egg"
+local Event = game:GetService("ReplicatedStorage").Communication.RE
+Event:FireServer(A_1, A_2, A_3)
+wait(0.5)
+
+
+else if EC == "Electro Egg" then
+    local A_1 = "PetInv"
+local A_2 = "HatchOnce"
+local A_3 = "Electro Egg"
+local Event = game:GetService("ReplicatedStorage").Communication.RE
+Event:FireServer(A_1, A_2, A_3)
+wait(0.5)
+
+
+else if EC == "Samurai Egg Egg" then
+    local A_1 = "PetInv"
+local A_2 = "HatchOnce"
+local A_3 = "City Egg"
+local Event = game:GetService("ReplicatedStorage").Communication.RE
+Event:FireServer(A_1, A_2, A_3)
+wait(0.5)
+
+else if EC == "Heaven Egg" then
+    local A_1 = "PetInv"
+local A_2 = "HatchOnce"
+local A_3 = "Heaven Egg"
+local Event = game:GetService("ReplicatedStorage").Communication.RE
+Event:FireServer(A_1, A_2, A_3)
+wait(0.5)
+
+
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end)
+
+local Misc = Window:NewTab("Misc")
+local MiscSection = Misc:NewSection("Misc")
+
+MiscSection:NewSlider("Walkspeed", "Changes the walkspeed", 250, 16, function(v)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+end)
+
+MiscSection:NewToggle("Auto Claim Daily", "Auto Claims Daily", function(v)
+    getgenv().autoswingers = v
+    while true do
+    if not getgenv().autoswingers then return end
+
+    local A_1 = "ClaimPlaytimeReward"
+    local A_2 = "1"
+    local Event = game:GetService("ReplicatedStorage").Communication.RE
+    Event:FireServer(A_1, A_2)
+
+local A_1 = "ClaimPlaytimeReward"
+local A_2 = "2"
+local Event = game:GetService("ReplicatedStorage").Communication.RE
+Event:FireServer(A_1, A_2)
+
+local A_1 = "ClaimPlaytimeReward"
+local A_2 = "3"
+local Event = game:GetService("ReplicatedStorage").Communication.RE
+Event:FireServer(A_1, A_2)
+
+local A_1 = "ClaimPlaytimeReward"
+local A_2 = "4"
+local Event = game:GetService("ReplicatedStorage").Communication.RE
+Event:FireServer(A_1, A_2)
+
+local A_1 = "ClaimPlaytimeReward"
+local A_2 = "5"
+local Event = game:GetService("ReplicatedStorage").Communication.RE
+Event:FireServer(A_1, A_2)
+
+local A_1 = "ClaimPlaytimeReward"
+local A_2 = "6"
+local Event = game:GetService("ReplicatedStorage").Communication.RE
+Event:FireServer(A_1, A_2)
+
+local A_1 = "ClaimPlaytimeReward"
+local A_2 = "7"
+local Event = game:GetService("ReplicatedStorage").Communication.RE
+Event:FireServer(A_1, A_2)
+
+local A_1 = "ClaimPlaytimeReward"
+local A_2 = "8"
+local Event = game:GetService("ReplicatedStorage").Communication.RE
+Event:FireServer(A_1, A_2)
+
+local A_1 = "ClaimPlaytimeReward"
+local A_2 = "9"
+local Event = game:GetService("ReplicatedStorage").Communication.RE
+Event:FireServer(A_1, A_2)
+
+local A_1 = "ClaimPlaytimeReward"
+local A_2 = "10"
+local Event = game:GetService("ReplicatedStorage").Communication.RE
+Event:FireServer(A_1, A_2)
+wait(10)
+    end
+end)
+end
