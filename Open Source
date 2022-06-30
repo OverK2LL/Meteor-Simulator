@@ -346,6 +346,16 @@ end
 end
 end)
 
+MainSection:NewButton("Buy All Meteors", "Buys all Meteors???", function(v)
+
+local A_1 = "CamShop"
+local A_2 = "BuyAll"
+local A_3 = "Nukes"
+local A_4 = 2
+local Event = game:GetService("ReplicatedStorage").Communication.RE
+Event:FireServer(A_1, A_2, A_3, A_4)
+end)
+
 
 local Teleport = Window:NewTab("Teleport")
 local TeleportSection = Teleport:NewSection("Teleport")
