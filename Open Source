@@ -352,7 +352,7 @@ local TeleportSection = Teleport:NewSection("Teleport")
 
 
 local Tele; --CREATE GLOBAL VARIABLE OF THE USERS SELECTION TO BE USED ANYWHERE
-TeleportSection:NewDropdown("Select Destination", "Select where you wanna go Duh??", {"City", "Desert", "Atlantis", "Winter", "Toxic", "Candy", "Lava", "Electro", "Samurai", "Heaven", "Summer",}, function(value)--THIS FUNCTION ALLOWS US TO STORE THE USERS SELECTION
+TeleportSection:NewDropdown("Select Destination", "Select where you wanna go Duh??", {"City", "Desert", "Atlantis", "Winter", "Toxic", "Candy", "Lava", "Electro", "Samurai", "Heaven",}, function(value)--THIS FUNCTION ALLOWS US TO STORE THE USERS SELECTION
     Tele = value; --STORES THE USERS SELECTION
 end)
 
@@ -361,21 +361,23 @@ TeleportSection:NewButton("Teleport", "Teleports", function(v)
 if Tele == "City" then
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1, 8.5, -119, 0, 0, 1, 0, 1, -0, -1, 0, 0)        
 else if Tele == "Desert" then
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1, 8.5, 146, 0, 0, 1, 0, 1, -0, -1, 0, 0)     
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1, 8.5, 146, 0, 0, 1, 0, 1, -0, -1, 0, 0)    
 else if Tele == "Atlantis" then
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1, 8.5, 405, 0, 0, 1, 0, 1, -0, -1, 0, 0) 
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1, 8.5, 405, 0, 0, 1, 0, 1, -0, -1, 0, 0)
+else if Tele == "Winter" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1, 8.5, 654, 0, 0, 1, 0, 1, -0, -1, 0, 0) 
 else if Tele == "Toxic" then
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1, 8.5, 654, 0, 0, 1, 0, 1, -0, -1, 0, 0)     
-else if Tele == "Candy" then
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1, 8.5, 905, 0, 0, 1, 0, 1, -0, -1, 0, 0)     
-else if Tele == "Lava" then
+else if Tele == "Candy" then
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1, 8.5, 1156, 0, 0, 1, 0, 1, -0, -1, 0, 0)     
-else if Tele == "Electro" then
+else if Tele == "Lava" then
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1, 8.5, 1407, 0, 0, 1, 0, 1, -0, -1, 0, 0)     
-else if Tele == "Samurai" then
+else if Tele == "Electro" then
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1, 8.5, 1664, 0, 0, 1, 0, 1, -0, -1, 0, 0)     
+else if Tele == "Samurai" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1, 8.5, 1923, 0, 0, 1, 0, 1, -0, -1, 0, 0)     
 else if Tele == "Heaven" then
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1, 8.5, 1923, 0, 0, 1, 0, 1, -0, -1, 0, 0)                                     
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1, 8.5, 2183, 0, 0, 1, 0, 1, -0, -1, 0, 0)                                     
                                     end
                                 end
                             end
@@ -385,6 +387,7 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1, 8.5, 
             end
         end
     end
+end 
 end)
 
 
